@@ -18,7 +18,7 @@ INSERT INTO users (
     'Wendy',
     'wendy12345@example.com',
     '0912333444',
-    '$2a$10$exampleEncodedPassword',
+    '$2a$10$dW0P0MsgkE3.8QslJxjVOemHhkKfBspTEqlHfG4YoTHm.jGUSxzOm',
     '喜歡旅遊與寫程式的後端工程師'
 );
 
