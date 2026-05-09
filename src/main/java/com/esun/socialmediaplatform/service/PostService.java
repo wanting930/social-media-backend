@@ -37,6 +37,18 @@ public class PostService {
 
             item.put("createdAt", post.get("created_at").toString());
 
+            if (post.get("comments") != null) {
+                String commentsStr = post.get("comments").toString();
+                try {
+                    JsonNode commentsJson = JsonUtils.getMapper().readTree(commentsStr);
+                    item.set("comments", commentsJson);
+                } catch (Exception e) {
+                    item.set("comments", JsonUtils.getMapper().createArrayNode());
+                }
+            } else {
+                item.set("comments", JsonUtils.getMapper().createArrayNode());
+            }
+
             data.add(item);
         }
 
